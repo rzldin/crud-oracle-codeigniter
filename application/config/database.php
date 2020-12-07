@@ -11,8 +11,8 @@ $hostname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT =
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => $hostname,
-	'username' => 'FORUM',
-	'password' => 'FNDIAMD',
+	'username' => 'hr',
+	'password' => 'admin',
 	'database' => '',
 	'dbdriver' => 'oci8',
 	'dbprefix' => '',

@@ -170,6 +170,10 @@ class DataController extends CI_Controller {
 		$this->form_validation->set_rules($validation);
 		if ($this->form_validation->run() == FALSE) {
 			# Jika salah maka tampilkan lagi view signin dengan error
+			$data = [
+				'title' => 'Sign-in User',
+				'pages' => 'signin'
+			];
 			$this->load->view('backend/login', $data, FALSE);
 		} else {
 			# Data yang akan diselect dari tabel admin 
@@ -201,7 +205,7 @@ class DataController extends CI_Controller {
 					redirect(base_url('admin/login'));
 				}
 			}else{
-				$this->session->set_flashdata('error', 'User not avalable!');
+				$this->session->set_flashdata('error', 'User Tidak Tersedia!');
 				redirect(base_url('admin/login'));
 			}
 		}
